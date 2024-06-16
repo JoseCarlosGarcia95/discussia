@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    volumes:
+      - .:/app
+    command:
+      - tail
+      - -f
+      - /dev/null
