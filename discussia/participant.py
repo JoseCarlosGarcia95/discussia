@@ -5,7 +5,7 @@ class Participant:
         self.messages = []
 
     def start(self):
-        f"""
+        system_prompt = f"""
         You're a participant in a debate between two or more AI models. The debate is about to start.
         Your objective is to defend your point of view and attack the point of view of the other participants.
         
