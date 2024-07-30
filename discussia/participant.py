@@ -5,22 +5,23 @@ class Participant:
         self.messages = []
 
     def start(self):
-        system_prompt = f""""
+        f"""
         You're a participant in a debate between two or more AI models. The debate is about to start.
         Your objective is to defend your point of view and attack the point of view of the other participants.
-        # Objective of debate.
+        
+        # Objective of the debate
         {self.debate.objective}
-        # Your point of view.
+        
+        # Your point of view
         {self.point_of_view}
-        # Requirements.
+        
+        # Requirements
         - You must defend your point of view and attack the point of view of the other participants.
         - You must use the following language: {self.debate.language}
-        - If you think the debate is over, you can end it by typing "ENDDEBATE" at the beginning of your answer, and the debate will be over.
-        - You'll receive the questions of the judge, identify by JUDGE.
-        - You must only defend your point of view and attack the point of view of the other participants.
-        - You'll receive the answers of the other participants, identify by participantX, where X is the number of the participant.
+        - If you think the debate is over, you can end it by typing "ENDDEBATE" at the beginning of your answer.
+        - You'll receive questions from the judge, identified by "JUDGE."
+        - You'll receive answers from the other participants, identified by "participantX," where X is the participant's number.
         - Your role internally will be assistant.
-
         """
 
         self.messages = [
